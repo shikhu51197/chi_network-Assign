@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import MovieList from "./MovieList";
 
 import { Box, FormControl, Button, FormLabel, Select, Flex } from "@chakra-ui/react";
+import axios from "axios";
 const HomePage = () => {
   const [favorites, setFavorites] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
@@ -36,7 +37,7 @@ const HomePage = () => {
           url += `&type=${selectedType}`;
         }
 
-        const response = await fetch(url);
+        const response = await  axios.get(url);
         const data = await response.json();
 
         if (data.Search) {
