@@ -24,10 +24,9 @@
   - `CSS3`
   - `JavaScript `
   - `ReactJS`
-  - `Redux`
-
+ 
 - #### For Styling:-  
-   - `Tailwind css `
+   - `Chakraui `
   
 - #### For live Project: -
    - `Vercel`
@@ -42,52 +41,47 @@
 ✨Run the command `npm start` in the frontend folder on localhost:3000.
 
 ---
-## Features ✨:-
----
- | Serial No            | Feature                                                              |
-| ----------------- | ------------------------
-| 1 | Search favourite npm package page|
-| 2 | Home Page Design, responsive design |
-| 3 | Create favorite, Show favourite list  |
-| 4 | Upload favourite, Edit & delete favorite|
-| 5 | view favourite page   |
+## Features
 
+- Search for movies by title.
+- View detailed information about a selected movie.
+- Add movies to the favorites list.
+- View and manage favorite movies.
+- Responsive design for various screen sizes.
 
 ---
 # Package.json(Dependency)✨:-
 
  | Serial No  | Frontend |
 | -----------------|-----|
-| 1 | Tailwind css |
+| 1 | Chakraui |
 | 2 |  React Router dom |
-| 3 | react-icons |
-| 4 | typescript |
-| 5 |  react |
-
-
+| 3 | react |
 
 ⭕Steps to use our project:
 ---
 
-
-Betalatics  Application lets you  add favourites, show a favourite list, search for npm packages and update, and delete favourites.
+A simple web application for searching and exploring movie details. The Movie Search App allows users to search for movies, view details, and add them to their favourites list. It provides a user-friendly interface for exploring movie information.
 
 ---✨Getting Started:
 
 ✨Initialize the Application: To begin using the application, navigate to the frontend terminal and execute the command npm start. This will start the application locally, making it accessible through your web browser at port 3000.
 
-✨Home Page: Upon launching the application, users are greeted with the home page, offering essential options for interaction like the add favourites button.
+✨Home Page: Upon launching the application, users are greeted with the home page, offering essential options for interaction like the Search movie, view movie,  and add favourites button.
 
 ---✨User Journey:
 
 ✨Add favourites: Following a successful visit, users are taken to the Create Favorites page.
 
-✨Show Favorites List: Once the favourites setup is complete, users can click on any favourite table to go to the view favourites popup. 
+✨Show Favorites List: Once the favourites setup is complete, show the list in a grid format and remove items from list. 
 
-✨Search  the npm package:  by query and favourites comment.
+---
 
-✨Edit and delete favourite data.
-
+# Technologies Used
+⭕ React
+⭕ Chakra UI (for styling)
+⭕ Axios (for API requests)
+⭕ React Router (for navigation)
 ---
 
 ## Flow
@@ -95,8 +89,8 @@ Betalatics  Application lets you  add favourites, show a favourite list, search 
 ```mermaid
 graph TD;
  App-->HomePage
-HomePage-->favouritesPage
-favouritesPage--> DashboardPage
+HomePage-->ViewMoviePage
+ViewMoviePage-->favouritesPage
 
 
 ```
