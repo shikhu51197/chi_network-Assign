@@ -1,0 +1,323 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .App {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  /* Add more styles for MovieDetails and Favorites components */
+/* styles.css */
+/* ... (previous styles) */
+
+/* MovieDetails component styles */
+.MovieDetails {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .MovieDetails h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .MovieDetails p {
+    font-size: 16px;
+  }
+  
+  /* Favorites component styles */
+  .Favorites {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Favorites ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .Favorites li {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    .App {
+      padding: 10px;
+    }
+  
+    .Favorites ul {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+    
+
+
+
+ 
+.Signup,
+.Login {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+/* styles.css */
+
+/* General Styles */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .App {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input,
+  button {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  /* MovieDetails component styles */
+  .MovieDetails {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .MovieDetails img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Favorites component styles */
+  .Favorites {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Favorites h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .Favorites ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .Favorites li {
+    width: 200px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  .Favorites li img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .Favorites li button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  /* Search, Sorting, Filtering Styles */
+  
+  .SearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .SearchResults {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .SortFilter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    .App {
+      padding: 10px;
+    }
+  
+    .Favorites li {
+      width: 100%;
+    }
+  }
+/* styles.css */
+
+/* ... (previous styles) */
+
+/* SearchResults component styles */
+.SearchResults {
+    margin-top: 20px;
+  }
+  
+  .SortFilter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  
+    label {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    select {
+      margin-top: 5px;
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
+  
+  .MovieList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  /* MovieCard component styles */
+  .MovieCard {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  
+    h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+  
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+    
