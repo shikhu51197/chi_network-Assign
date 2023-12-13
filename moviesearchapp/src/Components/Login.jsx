@@ -7,12 +7,13 @@ import {
   Heading,
   Box,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router";
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const toast = useToast();
-
+  const Navigate = useNavigate()
   const handleLogin = () => {
     if (!username || !password) {
       toast({
@@ -41,6 +42,8 @@ const Login = ({ onLogin }) => {
       });
 
       onLogin();
+      Navigate('/')
+      window.location.reload();
     } else {
       toast({
         title: "Error",

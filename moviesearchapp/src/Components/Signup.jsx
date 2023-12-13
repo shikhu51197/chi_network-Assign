@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Input, Button, VStack, useToast, Heading, Box } from "@chakra-ui/react";
+import {useNavigate } from "react-router";
 
 const Signup = ({ onSignup }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const toast = useToast();
-
+ const Navigate = useNavigate()
   const handleSignup = () => {
     if (!email || !username || !password) {
       alert("Please fill all the fields.");
@@ -24,6 +25,7 @@ const Signup = ({ onSignup }) => {
     });
 
     onSignup();
+    Navigate('/login')
   };
 
   return (

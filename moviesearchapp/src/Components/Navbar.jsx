@@ -1,14 +1,30 @@
-// components/Navbar.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Flex, Box, Text, Button } from "@chakra-ui/react";
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  useEffect(() => {
+    // Check if there is a user in local storage
+    const userFromLocalStorage = JSON.parse(localStorage.getItem("user"));
+    if (userFromLocalStorage) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Check if there is a user in local storage whenever isLoggedIn changes
+    const userFromLocalStorage = JSON.parse(localStorage.getItem("user"));
+    setIsLoggedIn(!!userFromLocalStorage);
+  }, [isLoggedIn]);
+
   const handleLogout = () => {
+    // Clear user from local storage and update isLoggedIn state
+    localStorage.removeItem("user");
     setIsLoggedIn(false);
   };
+
   return (
     <Flex
       as="nav"
@@ -32,16 +48,10 @@ const Navbar = () => {
         flexGrow={1}
         gap="50"
       >
-        <Link
-          to="/"
-          style={{ marginRight: "20px", cursor: "pointer", color: "white" }}
-        >
+        <Link to="/" style={{ marginRight: "20px", cursor: "pointer", color: "white" }}>
           Home
         </Link>
-        <Link
-          to="/favorites"
-          style={{ marginRight: "20px", cursor: "pointer", color: "white" }}
-        >
+        <Link to="/favorites" style={{ marginRight: "20px", cursor: "pointer", color: "white" }}>
           Favorites
         </Link>
       </Box>
