@@ -28,26 +28,25 @@ const HomePage = () => {
     const fetchData = async () => {
       try {
         let url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${searchQuery}&page=${currentPage}`;
-
+    
         if (selectedYear) {
           url += `&y=${selectedYear}`;
         }
-
+    
         if (selectedType) {
           url += `&type=${selectedType}`;
         }
-
-        const response = await  axios.get(url);
-        const data = await response.json();
-
-        if (data.Search) {
-          const sortedResults = data.Search.sort((a, b) => {
+    
+        const response = await axios.get(url);
+    
+        if (response.data.Search) {
+          const sortedResults = response.data.Search.sort((a, b) => {
             const comparison = a.Year.localeCompare(b.Year);
             return sortOrder === "asc" ? comparison : -comparison;
           });
-
+    
           setSearchResults(sortedResults);
-          setTotalPages(Math.ceil(data.totalResults / 5));
+          setTotalPages(Math.ceil(response.data.totalResults / 5));
         } else {
           setSearchResults([]);
           setTotalPages(1);
