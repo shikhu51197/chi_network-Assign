@@ -1,5 +1,5 @@
 
-> 💻 PROJECT NAME ✨ => 💻 chi_network-Assign
+> 💻 PROJECT NAME ✨ => 💻 Chi_network-Assign
 > 
 <br>
 
